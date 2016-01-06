@@ -1,0 +1,15 @@
+A PostgreSQL database and a PHP front-end for large genealogy or prosopography research projects, with focus on documentation of the entire population of a particular area.
+
+It differs from traditional "Family tree" programs in several ways:
+
+  * The main emphasis is on organization of source transcripts. It is intended for exhaustive research within a given area and time period, where the researcher(s) will enter full transcripts of original source protocols. (It is certainly possible to include stray entries from outside the assigned spatial and temporal scope.)
+
+  * The design is ultra-flexible, - there are few constraints on what you can actually do in terms of organization of the data. It will require careful planning from the outset of a new project, as well as discipline and obeyance to "meta-rules" while entering data.
+
+  * The data model is not compatible with GEDCOM. Anybody who is considering the use of this software should regard the incompatibility as a feature rather than a deficiency.
+
+From the programming perspective, the focus is on robustness, clean structure, and performance (in exactly that order). There is extensive use of views and stored procedures to abstract and encapsulate database operations, thus making the PHP interface as thin and simple as possible, as well as facilitating other types of interaction with the database via eg. Perl scripts. The PHP code is strictly procedural, with no objects. The user interface consists mainly of a collection of interactive, data-driven PHP «reports», which can be run as multiple tabs in a browser. That is a very dynamic and flexible layout.
+
+From the researcher point of view, the focus is a process of discovery centered on functional and formally sound source documentation. This documentation is organized in a tree structure where eg. a book reference, section, page, and individual transcript are stored at different levels, and the text elements are concatenated at run time to produce a full source reference. This facilitates easy storage and navigation of a very large number of source transcripts. The author is currently handling transcripts of nearly 100,000 individual Norwegian 18th century parish register entries with ease.
+
+The code base has been in constant development and use by the author since 2002, so this is a quite mature project. However, the [user documentation](http://solumslekt.org/forays/yggdrasil.php) is still a far cry from being adequate. Anyone who is interested in this project, be it as a user or a participant or preferably both, must be able to read PHP and SQL. For an outline of the project, see the description of its precursor [Exodus](http://solumslekt.org/forays/exodus.php). It is also recommended to read the author's blog "[Me And My Database](http://solumslekt.org/blog)" from end to end in order to understand some of the more important concepts.
